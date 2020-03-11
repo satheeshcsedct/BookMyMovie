@@ -1,0 +1,29 @@
+Data Model:
+
+User.rb
+
+name
+gender
+mobile_number
+
+ShowTime.rb
+
+Movie.rb:
+has_many
+
+Name: 
+Language
+
+Theatre:
+Name
+seatlimit
+
+has_many: movies
+has_many: show_times
+
+
+Booking:
+
+
+Couponcode.rb
+
