@@ -1,0 +1,8 @@
+%p#notice= notice
+%p#alert= alert
+.wrapper
+  #formContent
+    .card.shadow-sm
+    .card-header.mb-5
+      %h4.font-weight-normal New User
+    = render 'form', user: @user

@@ -1,0 +1,8 @@
+.col-sm-3
+  .card
+    %img.card-img-top.img-fluid{:alt => "Card image cap", :src => "//placehold.it/500x200"}/
+    .card-block.p-3
+      %h4.card-title= link_to movie.name, movie_path(movie)
+      %p.card-text=movie.description
+      %p.card-text
+        %small.text-muted Last updated 3 mins ago

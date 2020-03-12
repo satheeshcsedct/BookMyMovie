@@ -1,0 +1,21 @@
+= form_with(model: user, local: true) do |form|
+  - if user.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(user.errors.count, "error")
+        prohibited this user from being saved:
+      %ul
+        - user.errors.full_messages.each do |message|
+          %li= message
+  = form.text_field :name, placeholder: 'Name'
+  
+  = form.text_field :email, placeholder: 'Email'
+  
+  = form.password_field :password, placeholder: 'Password'
+
+  = form.password_field :password_confirmation, placeholder: 'Confirm Password'
+  
+  %div.input.ml-3.pl-3.mt-2
+    = form.select(:gender, options_for_select(options_for_select(User.genders.map {|k, v| [k.humanize.capitalize, k]})), {:include_blank => "Gender"}, { class: 'form-group form-control', style: 'width: 92%;text-align-last:center'})
+  
+  = form.submit class: 'btn btn-primary'

@@ -1,0 +1,13 @@
+%p#alert= alert
+%p#notice= notice
+.wrapper
+  #formContent
+    .card.shadow-sm
+    .card-header.mb-5
+      %h4.font-weight-normal Login
+    = form_tag sessions_path do |form|
+      = text_field_tag :email, nil, :placeholder => "Login"
+      = password_field_tag :password, nil, :placeholder => "Password"
+      = submit_tag 'Login', class: 'mt-4'
+    #formFooter
+      %a.underlineHover{:href => "#"} Forgot Password?
