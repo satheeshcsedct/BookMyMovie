@@ -8,4 +8,10 @@ class ApplicationController < ActionController::Base
       @current_user = nil
     end
   end
+
+  def login_required
+    return if current_user.present?
+
+    redirect_to login_path
+  end
 end

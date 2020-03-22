@@ -30,8 +30,8 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @booking = Booking.find(params[:id])
-    @booking.destroy
+    booking = Booking.find(params[:id])
+    booking.destroy
     redirect_to bookings_path, notice: 'Booking was successfully deleted.'
   end
 
@@ -51,12 +51,6 @@ class BookingsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def movie_params
     params.require(:movie).permit(:name, :description)
-  end
-
-  def login_required
-    return if current_user.present?
-
-    redirect_to login_path
   end
 
   def find_discount

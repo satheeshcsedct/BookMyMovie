@@ -1,5 +1,4 @@
 <% if @discount.present? %>
-
 $("#total_amount").text(<%=@show_timing.calculate_ticket_price(current_user, @discount)%>)
 $("#validation-msg").text('Applied...').removeClass('text-danger').addClass('text-success')
 <% else %>
