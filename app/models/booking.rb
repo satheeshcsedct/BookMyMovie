@@ -26,6 +26,6 @@ class Booking < ApplicationRecord
   def past_show?
     today = date
     time = show_timing&.start_time
-    Time.new(today.year, today.month, today.day, time.hour, time.min, time.sec)&.past? if today
+    Time.new(today.year, today.month, today.day, time.hour, time.min, time.sec)&.in_time_zone&.past? if today
   end
 end
