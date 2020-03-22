@@ -1,7 +1,33 @@
 %p#notice= notice
-%p
-  %strong Name:
-  = @movie.name
-%p
-  %strong Description:
-  = @movie.description
+.col-sm-12.p-15
+  .col-sm-12
+    .card
+      = image_tag(@movie.banner_url, class: 'mx-auto', size: '600x200')
+      .card-block.p-3
+        %h4.card-title= @movie.name
+        %p.card-text=@movie.description
+        %p.card-text
+          %small Actors:
+          %small.text-muted=@movie.actors
+  .col-sm-4.mx-auto
+    .input-group
+      %input#date-input.m-0{:type => "text"}
+
+  %div.ml-4#theater_details
+    = render partial: 'theater_details', locals: { date: Date.today }
+
+:javascript
+  $('#date-input').datepicker({
+    minDate: 0,
+    dateFormat:"DD, d MM, yy",
+    showOn: "button",
+    buttonImage: "/calendar.gif",
+    buttonImageOnly: true, buttonText: "Select date",
+    onSelect: function(date, instance) {
+      $.ajax({
+        url: "#{theater_details_movies_path}",
+        method: "get",
+        data: {id: "#{@movie.id}", date: $("#date-input").val() }
+      }); 
+     } 
+  }).datepicker("setDate", new Date());

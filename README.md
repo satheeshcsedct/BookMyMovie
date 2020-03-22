@@ -1,24 +1,45 @@
-# README
+bookmymovie
+======
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Application for movie booking
 
-Things you may want to cover:
+## Setup Instruction
 
-* Ruby version
+### Software Services Requirements
 
-* System dependencies
+  * Ruby version `2.7.0`
 
-* Configuration
+  You can install using rvm or rbenv.
 
-* Database creation
+  * Database mysql
 
-* Database initialization
+### Dependency Setup
 
-* How to run the test suite
+  * Install gem dependency:
+```
+  bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Configuration
+  
+  * Modify the mysql database password according to what you given during the mysql setup `database.yml`
 
-* Deployment instructions
+## Data Migration
 
-* ...
+  * Create database
+```
+  rake db:create
+```
+
+  * Run migration and seeding data:
+```
+  rake db:migrate
+  rake seed:migrate
+```
+
+## Start Rails server
+  * server
+```
+  rails s
+```
+  * Your good to access the application in your browser `localhost:4000`

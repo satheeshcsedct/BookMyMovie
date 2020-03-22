@@ -1,0 +1,37 @@
+- total_amount = show_timing.calculate_ticket_price(current_user)
+
+= form_with(model: booking, local: true) do |form|
+  - if booking.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(booking.errors.count, "error")
+        prohibited this booking from being saved:
+      %ul
+        - booking.errors.full_messages.each do |message|
+          %li= message
+  - if current_user.female?
+    .text-success= 'Flat 5% Discount applied for Female.'
+  .py-2
+    %a{"data-toggle" => "collapse", :href => "#coupon_code_block"} Enter coupon code
+  #coupon_code_block.collapse.py-5
+    %div
+      = text_field_tag :coupon_code, nil, placeholder: 'Enter Coupon Code eg: flat10'
+    %div
+      = link_to 'Apply', 'javascript:void(0);', {id: 'validate_coupon_code'}
+      #validation-msg
+  = form.hidden_field :release_id, value: release.id
+  = form.hidden_field :show_timing_id, value: show_timing.id
+  = form.hidden_field :date, value: @date
+  %div.py-3
+    %large.text-info.font-weight-bold Total price
+    %large.text-dark.font-weight-bold#total_amount=total_amount
+  = form.submit class: 'btn btn-primary'
+
+:javascript
+  $("#validate_coupon_code").on("click", function() {
+    $.ajax({
+      url: "#{validate_coupon_code_bookings_path}",
+      method: "get",
+      data: {show_timing_id: "#{show_timing.id}", coupon_code: $("#coupon_code").val() }
+    });
+  });

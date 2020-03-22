@@ -1,0 +1,25 @@
+# == Schema Information
+#
+# Table name: releases
+#
+#  id         :bigint           not null, primary key
+#  theater_id :bigint           not null
+#  movie_id   :bigint           not null
+#  language   :string(255)
+#  start_date :date
+#  end_date   :date
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  theater: one
+  movie: one
+  start_date: 2020-03-14
+  end_date: 2020-03-14
+
+two:
+  theater: two
+  movie: two
+  start_date: 2020-03-14
+  end_date: 2020-03-14

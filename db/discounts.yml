@@ -1,0 +1,21 @@
+girls:
+  name: 'Girls Flat 5%'
+  price: 0
+  percentage: 5
+  coupon_code: 'GIRLS5'
+  active: true
+  discount_type: 1
+newuser:
+  name: 'newuser 20'
+  price: 20
+  percentage: 0
+  coupon_code: 'NEWUSER'
+  active: true
+  discount_type: 0
+flat10:
+  name: 'flat 10'
+  price: 0
+  percentage: 10
+  coupon_code: 'FLAT10'
+  active: true
+  discount_type: 1

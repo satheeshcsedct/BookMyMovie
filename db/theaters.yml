@@ -1,0 +1,60 @@
+theater1:
+  name: 'Inox Cinemas'
+  seat_limit: 98
+  city: 'Bangalore'
+  area: 'ITPL'
+theater2:
+  name: 'PVR Cinemas'
+  seat_limit: 110
+  city: 'Bangalore'
+  area: whitefield
+theater3:
+  name: 'Rohini Cinemas'
+  seat_limit: 85
+  city: 'Pune'
+  area: 'Adambakkam'
+theater4:
+  name: 'Mahindra Cinemas'
+  seat_limit: 90
+  city: 'Chennai'
+  area: 'Guindy'
+theater5:
+  name: 'Abhinaya Cinemas'
+  seat_limit: 150
+  city: 'Bangalore'
+  area: 'Jayanagar'
+theater6:
+  name: 'Aruna Cinemas'
+  seat_limit: 125
+  city: 'Bangalore'
+  area: 'Marathalli'
+theater7:
+  name: 'Akash Cinemas'
+  seat_limit: 130
+  city: 'Bangalore'
+  area: 'tinfactory'
+theater8:
+  name: 'Balaji Cinemas'
+  seat_limit: 105
+  city: 'Bangalore'
+  area: 'Kesava'
+theater9:
+  name: 'Satheesh Cinemas'
+  seat_limit: 140
+  city: 'Bangalore'
+  area: 'hoodi'
+theater10:
+  name: 'Cauvery Cinemas'
+  seat_limit: 100
+  city: 'Bangalore'
+  area: 'Hebbal'
+theater11:
+  name: 'Udayakiran Cinemas'
+  seat_limit: 200
+  city: 'Hyderabad'
+  area: 'Ambedkar nagar'
+theater12:
+  name: 'Everest Cinemas'
+  seat_limit: 120
+  city: 'Bangalore'
+  area: 'Varthur'

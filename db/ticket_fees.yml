@@ -1,0 +1,12 @@
+morning:
+  show_type: 'morning'
+  price: 100
+afternoon:
+  show_type: 'afternoon'
+  price: 120
+evenning:
+  show_type: 'evening'
+  price: 180
+night:
+  show_type: 'night'
+  price: 150

@@ -1,0 +1,18 @@
+- theater = @release.theater
+.wrapper
+  #formContent
+    .card.shadow-sm
+    .card-header
+      %h4.font-weight-normal Confirm Booking
+    .card-text.font-weight-bold.mt-2= @release.movie.name
+    .card-text.mt-1= theater.name
+    .card-text
+      %small.text-muted=theater.area.capitalize + ','
+      %small.text-muted=theater.city.capitalize
+    .card-text
+      %small.text-muted= @date
+      %small.text-muted= display_show_time(@show_timing)
+    .card-text
+      %small.font-weight-bold Ticket price:
+      %small.font-weight-bold=@show_timing.ticket_fee.price
+    = render 'form', booking: @booking, release: @release, show_timing: @show_timing

@@ -6,7 +6,7 @@
     .card-header.mb-5
       %h4.font-weight-normal Login
     = form_tag sessions_path do |form|
-      = text_field_tag :email, nil, :placeholder => "Login"
+      = text_field_tag :email, nil, :placeholder => "Email"
       = password_field_tag :password, nil, :placeholder => "Password"
       = submit_tag 'Login', class: 'mt-4'
     #formFooter

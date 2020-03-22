@@ -1,0 +1,28 @@
+- @movie.releases.running_and_upcoming.each do |release|
+  - theater = release.theater
+  .row.col-sm-12.p-3.border-bottom
+    .col-sm-3
+      .card_title=theater.name
+      .mx-auto
+        %small Language:
+        %small.text-muted= release.language
+    .col-sm-9
+      - theater.show_timings.each do |show_timing|
+        - available_seats = available_seats(@movie, theater, show_timing, date )
+        - theater_limit = theater.seat_limit
+        - past_show = show_timing.past_show? && date == Date.today
+        .col-sm-2.mx-auto
+          .col-sm-10.btn-outline.btn.btn-outline-secondary{title: "#{'Only logged in user can book the ticket' unless current_user.present?}"}
+            - if past_show || available_seats == 0
+              = display_show_time(show_timing)
+            - else
+              = link_to display_show_time(show_timing), new_booking_path(release_id: release.id, show_timing_id: show_timing.id, date: date)
+          - unless past_show
+            .mx-auto
+              %small Available:
+              %small.font-weight-bold{class: "#{availability_display_class(available_seats, theater_limit) unless past_show}"}= available_seats&.to_s
+              %small= "/"
+              %small.font-weight-bold= theater_limit.to_s
+            .mx-auto
+              %small.text-muted Ticket price:
+              %small.font-weight-bold.font-italic=show_timing.ticket_fee&.price

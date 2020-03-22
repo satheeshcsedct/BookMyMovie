@@ -1,0 +1,7 @@
+<% if @discount.present? %>
+
+$("#total_amount").text(<%=@show_timing.calculate_ticket_price(current_user, @discount)%>)
+$("#validation-msg").text('Applied...').removeClass('text-danger').addClass('text-success')
+<% else %>
+$("#validation-msg").text('Not a valid coupon code...').removeClass('text-success').addClass('text-danger')
+<% end %>

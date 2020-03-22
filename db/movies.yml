@@ -1,0 +1,45 @@
+movie1:
+  name: 'Bahubali'
+  description: 'In the kingdom of Mahishmati, Shivudu falls in love with a fair maiden. While trying to woo her, he learns about the conflict-ridden past of his family and his true legacy.'
+  actors: 'Prabhas, Anushka Shetty, S. S. Rajamouli, Tamannaah'
+  banner_url: 'https://image.tmdb.org/t/p/w1280/dbR14OxzdtMVBULMtbAcbWH14Nq.jpg'
+movie2:
+  name: 'Avengers'
+  description: 'Nick Fury is compelled to launch the Avengers Initiative when Loki poses a threat to planet Earth. His squad of superheroes put their minds together to accomplish the task.'
+  actors: 'Scarlett Johansson, Robert Downey, Jr, Chris Evans'
+  banner_url: 'https://image.tmdb.org/t/p/w1280/or06FN3Dka5tukK1e9sl16pB3iy.jpg'
+movie3:
+  name: 'Baasha'
+  description: 'Rickshaw driver Manickam is a man who avoids violence at all costs. However, when his brother, a cop, gets into trouble with some goons, it triggers a set of events that revive Manickams old self.'
+  actors: 'Rajinikanth, Nagma, Raghuvaran, Janagaraj, Vijayakumar'
+  banner_url: 'https://image.tmdb.org/t/p/w1280/1hWOsCBpMsXwUBYapG1Q3tMBjuC.jpg'
+movie4:
+  name: 'KGF'
+  description: 'Rocky, a young man, seeks power and wealth in order to fulfil a promise to his dying mother. His quest takes him to Mumbai, where he gets involved with the notorious gold mafia.'
+  actors: 'Yash, Srinidhi, Anant, Achyutha, Malavika'
+  banner_url: 'https://image.tmdb.org/t/p/w1280/ltHlJwvxKv7d0ooCiKSAvfwV9tX.jpg'
+movie5:
+  name: 'Premam'
+  description: 'While Georges first love turns out to be a disappointment, Malar, a college lecturer, rekindles his love interest. His romantic journey takes him through several stages, helping him find his purpose.'
+  actors: 'Anupama Parameswaran, Nivin Pauly, Madonna Sebastian, Sai Pallavi, Nivin, Krishna'
+  banner_url: 'https://m.media-amazon.com/images/M/MV5BMzJhNjMyOGMtYjhiYy00ZTAwLThmZWUtZmE5NzI3OTk4Y2M4XkEyXkFqcGdeQXVyMzQ5Njc3NzU@._V1_QL50_.jpg'
+movie6:
+  name: 'Eega'
+  description: 'Nani loves Bindu but is killed by a jealous Sudeep, who lusts after Bindu. Nani is reincarnated as a fly and decides to avenge his death. He teams up with Bindu to make Sudeeps life a living hell.'
+  actors: 'Sudip, Nani, Samantha, Srinivas, Crazy Mohan, Devadharshini, Santhanam'
+  banner_url: 'https://image.tmdb.org/t/p/w1280/poiLXxM1HqG27JokvhaS2rzrrYe.jpg'
+movie7:
+  name: '3 Idiots'
+  description: 'In college, Farhan and Raju form a great bond with Rancho due to his refreshing outlook. Years later, a bet gives them a chance to look for their long-lost friend whose existence seems rather elusive.'
+  actors: 'Amir Khan, Kareena, Madhavan, Sharman, Boman, Mona'
+  banner_url: 'https://image.tmdb.org/t/p/w1280/rGZHtBoEMG7tv3fH3vriNyTNhBJ.jpg'
+movie8:
+  name: 'Thulladha Manamum Thullum'
+  description: 'Kutty is a good-hearted soul, but unfortunate incidents tend to portray his ruffian side whenever he encounters the girl he loves. A bizarre incident brings them together and yet keeps them apart.'
+  actors: 'Vijay, Simran, Manivannan, Dhamu, Vaiyapuri, Ponnambalam'
+  banner_url: 'https://m.media-amazon.com/images/M/MV5BMmMxYzFiMGUtNmQwNi00YmZlLWIyMTEtMDhkYjRkMjk1ZjU4XkEyXkFqcGdeQXVyODE0NjUxNzY@._V1_QL50_.jpg'
+movie9:
+  name: '96'
+  description: 'K Ramachandran, a photographer, gets nostalgic after he visits his school in his hometown. During a reunion with his classmates, he meets Janaki, his childhood sweetheart.'
+  actors: 'Vijay Sethupathi, Trisha, Gouri, Devadharshini, Varsha, Adithya, Janagaraj'
+  banner_url: 'https://image.tmdb.org/t/p/w1280/nrVloCa2hCFOztRF1DZU2jnWIiQ.jpg'
