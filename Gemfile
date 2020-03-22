@@ -55,6 +55,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # CUSTOM GEMS
 gem 'bcrypt', '~> 3.1', '>= 3.1.13'
+gem 'browser-timezone-rails'
 gem 'haml-rails', '~> 2.0', '>= 2.0.1'
 
 group :development, :test do

@@ -26,8 +26,8 @@ class Release < ApplicationRecord
     hindi: 'hindi'
   }
 
-  scope :running, -> { where('start_date <= ? AND end_date >= ?', Date.today, Date.today) }
-  scope :upcoming, -> { where('start_date > ?', Date.today) }
-  scope :running_and_upcoming, -> { where('start_date <= ? AND end_date >= ? OR start_date > ?', Date.today, Date.today, Date.today) }
+  scope :running, -> { where('start_date <= ? AND end_date >= ?', Date.current, Date.current) }
+  scope :upcoming, -> { where('start_date > ?', Date.current) }
+  scope :running_and_upcoming, -> { where('start_date <= ? AND end_date >= ? OR start_date > ?', Date.current, Date.current, Date.current) }
   scope :latest_screened, -> { order('start_date desc, end_date asc') }
 end

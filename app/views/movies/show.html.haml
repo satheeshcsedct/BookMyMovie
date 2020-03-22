@@ -14,7 +14,7 @@
       %input#date-input.m-0{:type => "text"}
 
   %div.ml-4#theater_details
-    = render partial: 'theater_details', locals: { date: Date.today }
+    = render partial: 'theater_details', locals: { date: Date.current }
 
 :javascript
   $('#date-input').datepicker({

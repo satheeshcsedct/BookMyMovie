@@ -28,7 +28,7 @@ class ShowTiming < ApplicationRecord
   end
 
   def past_show?
-    today = Date.today
+    today = Date.current
     time = start_time
     Time.new(today.year, today.month, today.day, time.hour, time.min, time.sec)&.past?
   end

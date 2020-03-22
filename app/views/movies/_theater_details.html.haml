@@ -10,7 +10,7 @@
       - theater.show_timings.each do |show_timing|
         - available_seats = available_seats(@movie, theater, show_timing, date )
         - theater_limit = theater.seat_limit
-        - past_show = show_timing.past_show? && date == Date.today
+        - past_show = show_timing.past_show? && date == Date.current
         .col-sm-2.mx-auto
           .col-sm-10.btn-outline.btn.btn-outline-secondary{title: "#{'Only logged in user can book the ticket' unless current_user.present?}"}
             - if past_show || available_seats == 0

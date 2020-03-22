@@ -14,6 +14,6 @@ class Movie < ApplicationRecord
   has_many :releases
   has_many :theaters, through: :releases
 
-  scope :running_and_upcoming, -> { joins(:releases).where('releases.start_date <= ? AND releases.end_date >= ? OR releases.start_date > ?', Date.today, Date.today, Date.today) }
+  scope :running_and_upcoming, -> { joins(:releases).where('releases.start_date <= ? AND releases.end_date >= ? OR releases.start_date > ?', Date.current, Date.current, Date.current) }
   scope :latest_screened, -> { joins(:releases).order('releases.start_date desc, releases.end_date asc') }
 end

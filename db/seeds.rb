@@ -39,7 +39,7 @@ ActiveRecord::Base.transaction do
   end
 
   # ShowTiming
-  (Time.now.beginning_of_day.to_i..Time.now.end_of_day.to_i).step(5.minutes) do |date|
+  (Time.zone.now.beginning_of_day.to_i..Time.zone.now.end_of_day.to_i).step(5.minutes) do |date|
     date = Time.at(date)
     ShowTiming.find_or_create_by(start_time: date, ticket_fee_id: get_ticket_fee(date))
   end
@@ -54,7 +54,7 @@ ActiveRecord::Base.transaction do
     movies = Movie.order('RAND()').first(6)
     movies.each do |movie|
       language = Release.languages.values[rand(Release.languages.values.size)]
-      Release.find_or_create_by(theater_id: theater.id, movie_id: movie.id, language: language, start_date: Date.today, end_date: (Date.today + rand(20..40).days))
+      Release.find_or_create_by(theater_id: theater.id, movie_id: movie.id, language: language, start_date: Date.current, end_date: (Date.current + rand(20..40).days))
     end
   end
 
